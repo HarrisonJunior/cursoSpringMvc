@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Jedi</title>
+</head>
+
+<body>
+	<h1>Olá Jedis!</h1>
+
+	<table>
+		<tr>
+			<th>FirstName</th>
+			<th>LastName</th>
+		</tr>
+	<tr th:each="jedi: ${jediList}">
+		<td th:text="${jedi.firstName}"></td>
+		<td th:text="${jedi.lastName}"></td>
+	</tr>
+	</table>
+
+	<h2 th:if="${message}" th:text="${message}"></h2>
+
+</body>
+</html>
